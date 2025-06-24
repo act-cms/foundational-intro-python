@@ -91,16 +91,6 @@ functions_quiz = [
 
 for_loops_quiz = [
     {
-        "question": "What is the correct syntax for a for loop in Python?",
-        "type": "multiple_choice",
-        "answers": [
-            {"answer": "for variable in list\n    do things", "correct": False, "feedback": "Missing the colon (:) after the list name. Python requires a colon at the end of the for statement."},
-            {"answer": "for variable in list:\ndo things", "correct": False, "feedback": "Missing indentation. The code inside the loop must be indented."},
-            {"answer": "for variable in list:\n    do things", "correct": True, "feedback": "Correct! A for loop needs a colon after the list name and the code inside must be indented."},
-            {"answer": "loop variable in list:\n    do things", "correct": False, "feedback": "Missing the 'for' keyword. Python for loops must start with 'for'."}
-        ]
-    },
-    {
         "question": "What does the append method do?",
         "type": "multiple_choice",
         "answers": [
@@ -108,16 +98,6 @@ for_loops_quiz = [
             {"answer": "Adds a new item to the end of an existing list", "correct": True, "feedback": "Correct! The append method adds a new item to the end of an existing list."},
             {"answer": "Sorts the items in a list", "correct": False, "feedback": "No, append doesn't sort anything, it just adds items."},
             {"answer": "Counts the number of items in a list", "correct": False, "feedback": "No, that would be the len() function, not append."}
-        ]
-    },
-    {
-        "question": "Why did this code produce an error?\n\n```python\nfor number in energy_kcal:\n    kJ = number * 4.184\n    energy_kJ.append(kJ)\n```",
-        "type": "multiple_choice",
-        "answers": [
-            {"answer": "The calculation is wrong", "correct": False, "feedback": "No, the calculation is correct. The error is about the list."},
-            {"answer": "Missing indentation", "correct": False, "feedback": "No, the indentation looks correct in this example."},
-            {"answer": "The list energy_kJ doesn't exist yet", "correct": True, "feedback": "Correct! You can't append to a list that doesn't exist. The list energy_kJ needs to be created (even as an empty list) before the loop."},
-            {"answer": "Missing colon after the for statement", "correct": False, "feedback": "No, there is a colon in the for statement."}
         ]
     },
     {
@@ -132,52 +112,9 @@ for_loops_quiz = [
     }
 ]
 
-lists_conditionals_quiz = [
-    {
-        "question": "What is the correct syntax for a basic if statement in Python?",
-        "type": "multiple_choice",
-        "answers": [
-            {"answer": "if condition { code }", "correct": False, "feedback": "No, Python doesn't use curly brackets for code blocks."},
-            {"answer": "if condition: code", "correct": False, "feedback": "Close, but the code should be on the next line and indented."},
-            {"answer": "if condition:\n    code", "correct": True, "feedback": "Correct! Python uses a colon and indentation to define code blocks."},
-            {"answer": "if (condition) then code", "correct": False, "feedback": "No, Python doesn't use 'then' keyword."}
-        ]
-    },
-    {
-        "question": "Given the list `temps = [15, -5, 22, 0, 18]`, what does `temps[1]` return?",
-        "type": "multiple_choice",
-        "answers": [
-            {"answer": "15", "correct": False, "feedback": "No, that's temps[0]. Remember Python uses zero-based indexing."},
-            {"answer": "-5", "correct": True, "feedback": "Correct! temps[1] returns the second element, which is -5."},
-            {"answer": "22", "correct": False, "feedback": "No, that would be temps[2]."},
-            {"answer": "5", "correct": False, "feedback": "No, the element at index 1 is -5, not 5."}
-        ]
-    },
-    {
-        "question": "What would this code print?\n\n```python\nvalues = [10, 25, 8, 30]\nif values[2] < 15:\n    print(\"Small number\")\n```",
-        "type": "multiple_choice",
-        "answers": [
-            {"answer": "Nothing - no output", "correct": False, "feedback": "Actually, values[2] is 8, which is less than 15, so the condition is True."},
-            {"answer": "Small number", "correct": True, "feedback": "Correct! values[2] is 8, which is less than 15, so the condition is True and 'Small number' is printed."},
-            {"answer": "10", "correct": False, "feedback": "No, this code doesn't print the value itself, it prints text based on a condition."},
-            {"answer": "Error", "correct": False, "feedback": "No, this code runs without errors."}
-        ]
-    },
-    {
-        "question": "Which of the following correctly checks if the first element of a list called `data` is greater than 100?",
-        "type": "multiple_choice",
-        "answers": [
-            {"answer": "if data[1] > 100:", "correct": False, "feedback": "No, data[1] is the second element. The first element is data[0]."},
-            {"answer": "if data[0] > 100:", "correct": True, "feedback": "Correct! data[0] accesses the first element since Python uses zero-based indexing."},
-            {"answer": "if data.first() > 100:", "correct": False, "feedback": "No, lists don't have a first() method in Python."},
-            {"answer": "if first(data) > 100:", "correct": False, "feedback": "No, there's no built-in first() function in Python."}
-        ]
-    }
-]
-
 predict_output_quiz = [
     {
-        "question": "What does the following code print?\n\n```python\nenergy_kcal = [-13.4, -2.7, 5.4, 42.1]\nslice1 = energy_kcal[1:]\nslice2 = energy_kcal[:3]\nprint('slice1 is', slice1)\nprint('slice2 is', slice2)\n```",
+        "question": "What does the code in the cell below this one print? Try to predict the answer before you run it.",
         "type": "multiple_choice",
         "answers": [
             {"answer": "slice1 is [-2.7, 5.4, 42.1]\nslice2 is [-13.4, -2.7, 5.4]", "correct": True, "feedback": "Correct! slice1 = energy_kcal[1:] takes from index 1 to the end. slice2 = energy_kcal[:3] takes from the beginning up to (but not including) index 3."},
